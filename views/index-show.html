@@ -1,0 +1,416 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>展示首页</title>
+    <link href="../assets/css/all.css" type="text/css" rel="stylesheet"/>
+    <script src="../src/js/flexmobi.js"></script>
+</head>
+<body class="wrap-show">
+<div class="next-mark"></div>
+<div class="next-mark mark1"></div>
+<div class="shade">
+    <div class="alert-msg">
+        <button class="alert-button"></button>
+    </div>
+    <div>
+        <img alt="share"  class="share-img" src="../assets/images/show_share_02.png">
+    </div>
+</div>
+<div class="main">
+    <div class="swiper-wrapper" >
+        &lt;!&ndash;开始使用&ndash;&gt;
+        <section class="swiper-slide page2" >
+            <header>
+                <img class="page2-ac-1" src="../assets/images/show_1_1.png" alt="show">
+            </header>
+            <article id="page2Show">
+                <script id="page2Scr" type="text/soda">
+                    <section soda-repeat="item in data">
+                        <h2 class="page2-ac-2"><span class="page2-ac-span1">{{item.start_year}}</span>&nbsp;&nbsp;年&nbsp;&nbsp;<span class="page2-ac-span2">{{item.start_month}}</span>&nbsp;&nbsp;月&nbsp;&nbsp;<span class="page2-ac-span3">{{item.start_day}}</span>&nbsp;&nbsp;日</h2>
+                        <p class="page2-ac-3">我开始使用本号码</p>
+                        <p class="page2-ac-4">已经连续使用&nbsp;&nbsp;<span id="data-interval" class="page2-ac-span4 data-interval">0</span>&nbsp;&nbsp;天</p>
+                        <p class="p-img page2-ac-5"></p>
+                    </section>
+                </script>
+            </article>
+        </section>
+        &lt;!&ndash;第一个电话&ndash;&gt;
+        <section class="swiper-slide page3" id="page3Show">
+            <script id="page3Scr" type="text/soda">
+                <img alt="show_2_1" class="show_2_1 page3-ac-img1" src="../assets/images/show_2_1.png">
+                <img alt="show_2_2" class="show_2_2 page3-ac-img2" src="../assets/images/show_2_2.png">
+                <img alt="show_2_3" class="show_2_3 page3-ac-img3" src="../assets/images/show_2_3.png">
+                <article class="art-right" soda-repeat="item in data">
+                    <h2 class="green page3-ac-art1-1">
+                         猴年
+                    </h2>
+                    <p class="page3-ac-art1-2">
+                        我接到的一个电话来自
+                    </p>
+                    <h3 class="page3-ac-art1-3">
+                        {{item.monkey.first_call_out}}
+                    </h3>
+                    <p class="page3-ac-art1-4">
+                        我第一个电话打给
+                    </p>
+                    <h3 class="page3-ac-art1-5">
+                        {{item.monkey.first_call_in}}
+                    </h3>
+                </article>
+
+                <article class="art-left" soda-repeat="item in data">
+
+                    <h2 class="pink page3-ac-art2-1">
+                         马月
+                    </h2>
+                    <p class="pick page3-ac-art2-2">
+                        我接到的第一个电话来自
+                    </p>
+                    <h3 class=" page3-ac-art2-3">
+                        {{item.horse.first_call_out}}
+                    </h3>
+                    <p class=" page3-ac-art2-4">
+                        我第一个电话打给
+                    </p>
+                    <h3 class=" page3-ac-art2-5">
+                        {{item.horse.first_call_in}}
+                    </h3>
+                </article>
+                <footer>
+                    <p class="page3-ac-3">马月指2016年5月-7月3日</p>
+                </footer>
+            </script>
+
+        </section>
+        &lt;!&ndash;流量动态&ndash;&gt;
+        <section class="swiper-slide page4" id="page4Show">
+            <script type="soda/text" id="page4Scr">
+            <header>
+                <p class="font36 page5-ac-1">我不知道的<span class="span-large green page5-ac-span">24小时</span>动态图</p>
+            </header>
+            <article soda-repeat="item in data">
+                <div class="clear">
+                    <div class="img-maxData font20 ">
+                        最高<span class="blue">50M</span>
+                        <div class="icon-3"></div>
+                    </div>
+                    <img src="../assets/images/show_4_1.png" alt="show_4_1" class="page5-ac-2">
+                    <p class="p-tip font20 gray page5-ac-3">每天/非wifi流量环境</p>
+                </div>
+                <div class="p-group">
+                    <p class="pink font44 page5-ac-4">
+                        {{item.max_flow_hour}}
+                    </p>
+                    <p class="font36 page5-ac-5">是我流量使用的高峰时段</p>
+                </div>
+            </article>
+            </script>
+        </section>
+        &lt;!&ndash;渠道选择&ndash;&gt;
+        <section class="swiper-slide page5" id="page5Show">
+            <script type="text/soda" id="page5Scr">
+            <header>
+                <p class="font36 page4-ac-1" >
+                    我的朋友们，他们对运营商的选择
+                </p>
+            </header>
+            <article soda-repeat="item in data">
+                <div class="image-group1">
+                    <img src="../assets/images/show_5_1.png" alt="show_5_1" class="page4-ac-img1">
+                    <p class="font30 page4-ac-p1" >朋友圈占比最多的是&nbsp;&nbsp;<span class="font36 green page4-ac-span" id="ratios">移动</span></p>
+                </div>
+                <div class="image-group2 clear">
+                    <div class="image-man">
+                        <img src="../assets/images/show_5_2.png" alt="show_5_2" class="page4-ac-img2">
+                        <s class="font20 blue page4-ac-s">平均年龄{{item.friend_male.age_avg}}岁</s>
+                    </div>
+                    <div class="image-girl">
+                        <img src="../assets/images/show_5_3.png" alt="show_5_3" class="page4-ac-img3">
+                        <s class="font20 pink page4-ac-s">平均年龄{{item.friend_female.age_avg}}岁</s>
+                    </div>
+                    <p class="font30 page4-ac-p2">我使用深圳移动的朋友中</p>
+                    <p class="font30 page4-ac-p2"><span class="blue font36" data-st="1"style="display: none" id="male">男性朋友&nbsp;</span><span class="blue font36" data-st="2" style="display: none" id="female" >女性朋友&nbsp;</span>会更多</p>
+                </div>
+
+            </article>
+            </script>
+        </section>
+        &lt;!&ndash;话费账单&ndash;&gt;
+        <section class="swiper-slide page6" id="page6Show">
+            <script type="soda/text" id="page6Scr">
+            <header>
+                <h3 class="page6-ac-1">我的话费账单</h3>
+                <div class="page6-ac-2" soda-repeat="item in data">
+                    <p class="page6-ac-3">在深圳排名&nbsp;第&nbsp;&nbsp;<span class="green">{{item.rank}}</span>&nbsp;&nbsp;位</p>
+                    <p class="page6-ac-4">超过深圳用户&nbsp;<span class="pink">{{item.percent}}</span></p>
+                </div>
+            </header>
+            <article>
+                <p class="page6-ac-5">通常，我选择以下方式充值:</p>
+                <img class="page6-ac-6" src="../assets/images/show_3_2.png" alt="show_3_2" >
+            </article>
+            </script>
+
+        </section>
+        &lt;!&ndash;现在充值&ndash;&gt;
+        <section class="swiper-slide page7" id="page7Show">
+            <script type="text/soda" id="page7Scr">
+            <header>
+                <p class="font36 page7-ac-1">现在&nbsp;&nbsp;深圳移动公众号</p>
+                <p class="font44 page7-ac-2">充100送<span class="pink">6</span>元+随机优惠</p>
+            </header>
+
+            <article soda-repeat="item in data">
+                <div class="button-image ">
+                    <button  class="page7-ac-3"><a style="display:block;width:100%;height:100%" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxafb99a887a31f4fa&redirect_uri=http%3A%2F%2Fszydweixin.com%2FCZYH%2Findex.html&response_type=code&scope=snsapi_base&status=1&connect_redirect=1#wechat_redirect
+"></a></button>
+                    <img src="../assets/images/show_6_3.png" class="img-btnHand ">
+                </div>
+                <div class="button-invite-group">
+                    <p class="font36 gray page7-ac-1">当前话费余额为&nbsp;&nbsp;<span class="green">{{item.balance}}</span>&nbsp;&nbsp;元</p>
+                    <p class="font36 gray page7-ac-2">20元话费和流量小时包随机送</p>
+                    <p class="p-tip font28 gray page7-ac-4">邀请好友</p>
+                    <button class="button-invite clickInvite"></button>
+                </div>
+
+            </article>
+
+            <footer>
+                <p class="p-dec  font28 gray"><a class="showAlert page7-ac-4">免责申明 ></a></p>
+            </footer>
+            </script>
+
+        </section>
+    </div>
+</div>
+
+<script src="../src/js/zepto.min.js"></script>
+<script src="../src/js/zepto.fullpage.min.js"></script>
+<script src="../src/js/index-show.js"></script>
+<script src="../src/js/sodaRender.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>我的猴年马月账单</title>
+    <link href="../assets/css/all.css" type="text/css" rel="stylesheet"/>
+    <script src="../src/js/flexmobi.js"></script>
+</head>
+<body class="wrap-show">
+<div class="next-mark"></div>
+<div class="next-mark mark1"></div>
+<div class="shade">
+    <div class="alert-msg">
+        <button class="alert-button"></button>
+    </div>
+    <div>
+        <img alt="share"  class="share-img" src="../assets/images/show_share_02.png">
+    </div>
+
+</div>
+<div class="main">
+    <div class="swiper-wrapper">
+        <!--开始使用-->
+        <section class="swiper-slide page2" >
+            <header>
+                <img class="page2-ac-1" src="../assets/images/show_1_1.png" alt="show">
+            </header>
+            <article id="page2Show">
+                <script id="page2Scr" type="text/soda">
+                           <section soda-repeat="item in data">
+                               <h2 class="page2-ac-2"><span class="page2-ac-span1">{{item.start_year}}</span>&nbsp;&nbsp;年&nbsp;&nbsp;<span class="page2-ac-span2">{{item.start_month}}</span>&nbsp;&nbsp;月&nbsp;&nbsp;<span class="page2-ac-span3">{{item.start_day}}</span>&nbsp;&nbsp;日</h2>
+                               <p class="page2-ac-3">我开始使用本号码</p>
+                               <p class="page2-ac-4">已经连续使用&nbsp;&nbsp;<span id="data-interval" class="page2-ac-span4 data-interval">0</span>&nbsp;&nbsp;天</p>
+                               <p class="p-img page2-ac-5"></p>
+                           </section>
+                       </script>
+            </article>
+        </section>
+        <!--第一个电话-->
+        <section class="swiper-slide page3" id="page3Show">
+            <script id="page3Scr" type="text/soda">
+                <img alt="show_2_1" class="show_2_1 page3-ac-img1" src="../assets/images/show_2_1.png">
+                <img alt="show_2_2" class="show_2_2 page3-ac-img2" src="../assets/images/show_2_2.png">
+                <img alt="show_2_3" class="show_2_3 page3-ac-img3" src="../assets/images/show_2_3.png">
+                <article class="art-right" soda-repeat="item in data">
+                    <h2 class="green page3-ac-art1-1">
+                         猴年
+                    </h2>
+                     <p class="page3-ac-art1-2">
+                        我接到的一个电话来自
+                    </p>
+                     <h3 class="page3-ac-art1-3">
+                        {{item.monkey.first_call_out}}
+                    </h3>
+                    <p class="page3-ac-art1-4">
+                        我第一个电话打给
+                    </p>
+                    <h3 class="page3-ac-art1-5">
+                        {{item.monkey.first_call_in}}
+                    </h3>
+                </article>
+
+                <article class="art-left" soda-repeat="item in data">
+
+                    <h2 class="pink page3-ac-art2-1">
+                         马月
+                    </h2>
+                    <p class="pick page3-ac-art2-2">
+                        我接到的第一个电话来自
+                    </p>
+                    <h3 class=" page3-ac-art2-3">
+                        {{item.horse.first_call_out}}
+                    </h3>
+                    <p class=" page3-ac-art2-4">
+                        我第一个电话打给
+                    </p>
+                    <h3 class=" page3-ac-art2-5">
+                        {{item.horse.first_call_in}}
+                    </h3>
+                </article>
+                <footer>
+                    <p class="page3-ac-3">马月指2016年5月-7月3日</p>
+                </footer>
+            </script>
+
+        </section>
+        <!--渠道选择-->
+        <section class="swiper-slide page4" id="page4Show">
+            <script type="text/soda" id="page4Scr">
+            <header>
+                <p class="font36 page4-ac-1" >
+                    我的朋友们，他们对运营商的选择
+                </p>
+            </header>
+            <article soda-repeat="item in data">
+                <div class="image-group1">
+                    <div id="chartPieBig" class="chart-pie-big page4-ac-img1"></div>
+                    <ul id="showOperator" class="page4-ac-ul">
+                        <li soda-repeat="li in item.operator_ratios" class="page4-ac-li" style="color:{{li.color}};"> - {{li.name}}&nbsp;{{li.value}}%</li>
+                    </ul>
+                    <p class="font30 page4-ac-p1" >朋友圈占比最多的是&nbsp;&nbsp;<span class="font36 page4-ac-span green" id="ratios">移动</span></p>
+                </div>
+                <div class="image-group2 clear">
+                    <div class="image-man page4-ac-img2">
+                        <div class="chart-donut-wrap ride1 ride2 male ">
+                            <div id="chartDonutMale" class="chart-donut"></div>
+                            <div class="label ">男</div>
+                            <div class="rate" id="donutRateMale"></div>
+                        </div>
+                        <s class="font20 blue page4-ac-s">平均年龄{{item.male.age_avg}}岁</s>
+                    </div>
+                    <div class="image-girl page4-ac-img3">
+                        <div class="chart-donut-wrap ride1 ride2 female">
+                            <div id="chartDonutFemale" class="chart-donut female"></div>
+                            <div class="label">女</div>
+                            <div class="rate" id="donutRateFemale"></div>
+                        </div>
+                        <s class="font20 pink page4-ac-s">平均年龄{{item.female.age_avg}}岁</s>
+                    </div>
+                    <p class="font30 page4-ac-p2">我使用深圳移动的朋友中</p>
+                    <p class="font30 page4-ac-p2"><span class="blue font36" data-st="1"style="display: none" id="male">男性朋友&nbsp;</span><span class="blue font36" data-st="2" style="display: none" id="female" >女性朋友&nbsp;</span>会更多</p>
+                </div>
+
+            </article>
+            </script>
+        </section>
+        <!--流量动态-->
+        <section class="swiper-slide page5" id="page5Show">
+            <script type="soda/text" id="page5Scr">
+            <header>
+                <p class="font36 page5-ac-1">我不知道的<span class="span-large green page5-ac-span">24小时</span>动态图</p>
+            </header>
+            <article soda-repeat="item in data">
+                <div class="clear">
+                    <div id="chartLineTraffic" class="chart-line-traffic page5-ac-2"></div>
+                    <p class="p-tip font20 gray page5-ac-3">每天/非wifi流量环境</p>
+                </div>
+                <div class="p-group">
+                    <p class="pink font44 page5-ac-4">
+                        {{item.max_flow_hour}}
+                    </p>
+                   <p class="font36 page5-ac-5">是我流量使用的高峰时段</p>
+                </div>
+            </article>
+            </script>
+        </section>
+        <!--话费账单-->
+        <section class="swiper-slide page6" id="page6Show">
+            <script type="soda/text" id="page6Scr">
+            <header>
+                <h3 class="page6-ac-1">我的话费账单</h3>
+                <div class="page6-ac-2" soda-repeat="item in data">
+                    <p class="page6-ac-3">在深圳排名&nbsp;第&nbsp;&nbsp;<span class="green">{{item.rank}}</span>&nbsp;&nbsp;位</p>
+                    <p class="page6-ac-4">超过深圳用户&nbsp;<span class="pink">{{item.percent}}</span></p>
+                </div>
+            </header>
+            <article>
+                <p class="page6-ac-5">通常，我选择以下方式充值:</p>
+                <img class="page6-ac-6" src="../assets/images/show_3_2.png" alt="show_3_2" >
+            </article>
+            </script>
+
+        </section>
+        <!--现在充值-->
+        <section class="swiper-slide page7" id="page7Show">
+            <script type="text/soda" id="page7Scr">
+            <header>
+                <p class="font36 page7-ac-1">现在&nbsp;&nbsp;深圳移动公众号</p>
+                <p class="font44 page7-ac-2">充100送<span class="pink">6</span>元+随机优惠</p>
+            </header>
+
+            <article soda-repeat="item in data">
+                <div class="button-image">
+                     <button  class="page7-ac-3"><a style="display:block;width:100%;height:100%" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxafb99a887a31f4fa&redirect_uri=http%3A%2F%2Fszydweixin.com%2FCZYH%2Findex.html&response_type=code&scope=snsapi_base&status=1&connect_redirect=1#wechat_redirect"></a></button>
+                     <img src="../assets/images/show_6_3.png" class="img-btnHand">
+                </div>
+                <div class="button-invite-group">
+                    <p class="font36 gray page7-ac-1">当前话费余额为&nbsp;&nbsp;<span class="green">{{item.balance}}</span>&nbsp;&nbsp;元</p>
+                    <p class="font36 gray page7-ac-2">20元话费和流量小时包随机送</p>
+                    <p class="p-tip font28 gray page7-ac-4">邀请好友</p>
+                    <button class="button-invite clickInvite"></button>
+                </div>
+
+            </article>
+
+            <footer>
+                <p class="p-dec  font28 gray"><a class="showAlert">免责申明 ></a></p>
+            </footer>
+            </script>
+
+        </section>
+    </div>
+</div>
+<svg width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bgChartArea"  gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#FFF" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#FFF" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="fBlur" x="0" y="0">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+        </filter>
+    </defs>
+</svg>
+
+<script src="../src/js/zepto.min.js"></script>
+<script src="../src/js/zepto.fullpage.min.js"></script>
+<script src="../src/js/chartist.min.js"></script>
+<script src="../src/js/c_pie.js"></script>
+<script src="../src/js/sodaRender.js"></script>
+<script src="../src/js/index-show.js"></script>
+
+</body>
+</html>

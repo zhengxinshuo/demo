@@ -1,0 +1,76 @@
+{
+  "page2": {
+    "start_year": "2016",
+    "start_month": "01",
+    "start_day": "01",
+    "days": "1234"
+  },
+  "page3": {
+    "monkey": {
+      "first_call_out": "13570436749",
+      "first_call_in": "24681547850"
+    },
+    "horse": {
+      "first_call_out": "13570436749",
+      "first_call_in": "24681547850"
+    }
+  },
+  "page5": {
+    "traffic_data": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "max_flow_hour": "18:00-20:00"
+  },
+  "page4": {
+    "operator_ratios": [
+      {
+        "value": 25,
+        "name": "\u8054\u901a"
+      },
+      {
+        "value": 15,
+        "name": "\u7535\u4fe1"
+      },
+      {
+        "value": 60,
+        "name": "\u79fb\u52a8"
+      }
+    ],
+    "friend_male": {
+      "ratio": 25,
+      "age_avg": 20
+    },
+    "friend_female": {
+      "ratio": 75,
+      "age_avg": 28
+    }
+  },
+  "page6": {
+    "rank": "1",
+    "percent": "20%"
+  },
+  "page7": {"balance": "18.88"}
+}
